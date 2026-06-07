@@ -11,7 +11,7 @@ if [ -z "$msg" ]; then
     exit 1
 fi
 
-echo "Tag this version? (e.g. v1.0) — Press Enter to skip"
+echo "Tag this version? (e.g. 1.0) — Press Enter to skip"
 read tag
 
 git add .
