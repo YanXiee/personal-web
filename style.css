@@ -391,7 +391,7 @@ section:nth-child(even) {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
     gap: 48px;
-    align-items: start;
+    align-items: center;
 }
 
 /* Battery Charging Animation Card */
@@ -980,6 +980,7 @@ footer {
     }
     .hero-ctas {
         flex-direction: column;
+        flex: 1;
     }
     .hero-ctas .btn {
         flex: none;

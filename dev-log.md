@@ -20,6 +20,23 @@
 
 ---
 
+## 2026-06-07 (Session 4)
+
+### Technical Changes
+
+- Hero layout: photo moved inside `hero-bottom` (alongside buttons); absolute positioned to right on wide screens (`position: absolute; right: 0; top: 50%; transform: translateY(-50%)`); hero-wrapper gets `padding-right: calc(200px + 64px)` to compensate
+- Photo size: 200px desktop → 150px mobile (`.profile-frame`)
+- `hero-ctas`: added `flex: 1` on mobile so buttons stretch to fill available width
+- `about-row`: `align-items: start` → `align-items: center`
+- Contact form: Name + Email wrapped in `.form-row` (CSS grid 2-col on wide, 1-col on narrow)
+- `contact-wrapper`: changed from 2-col grid to flex column (LinkedIn + form both full-width)
+- Core Strengths: moved from About Me subsection → standalone `<section id="strengths">`; added to navbar
+- Navbar: updated labels (About Me, Core Strengths, Key Expertise, Publications, Work With Me)
+- Publications section: added ACS Fall 2023 oral, ACS Spring 2022 poster; reordered chronologically (ECS 2026 → Inorg. Chem. 2025 → JACS 2023 → ACS Fall 2023 → ACS Spring 2022)
+- git: fresh-start branch renamed to main; upstream set to origin/main
+
+---
+
 ## 2026-06-07 (Session 3)
 
 ### Technical Changes

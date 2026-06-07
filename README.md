@@ -12,13 +12,16 @@ Personal academic and professional portfolio website for Chuan-Pin (Pin) Chen, P
 
 ```
 Pin-Web/
-├── index.html        # Main page
-├── style.css         # All styles
-├── script.js         # Mobile menu, scroll reveal, nav highlighting
-├── profile.jpg       # Profile photo
-├── PinChen_CV.pdf    # CV (linked from hero section)
-├── deploy.command    # Double-click to deploy to GitHub Pages
-└── dev-log.md        # Development log
+├── index.html           # Main page
+├── style.css            # All styles
+├── script.js            # Mobile menu, scroll reveal, nav highlighting
+├── profile.jpg          # Profile photo
+├── PinChen_CV.pdf       # CV (linked from hero section)
+├── deploy.command       # Double-click to deploy to GitHub Pages
+├── dev-log.md           # Technical development log
+└── My Background/       # gitignored — private context files
+    ├── content-log.md   # Content change history
+    └── pin_chen_background.md  # Background notes for AI context
 ```
 
 ## Local Development
