@@ -77,36 +77,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // 5. Contact Form Handler (Visual feedback)
+    // 5. Contact Form Handler
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            
-            // Visual loading state
+
             submitBtn.disabled = true;
             submitBtn.style.opacity = '0.7';
             submitBtn.innerHTML = '<span class="logo-dot"></span> Sending...';
-            
-            // Simulate API request
-            setTimeout(() => {
-                submitBtn.innerHTML = 'Message Sent! ✓';
-                submitBtn.style.background = 'linear-gradient(135deg, #22c55e 0%, #10b981 100%)';
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { Accept: 'application/json' }
+                });
+
+                if (response.ok) {
+                    submitBtn.innerHTML = 'Message Sent! ✓';
+                    submitBtn.style.background = 'linear-gradient(135deg, #22c55e 0%, #10b981 100%)';
+                    submitBtn.style.color = '#fff';
+                    contactForm.reset();
+                } else {
+                    submitBtn.innerHTML = 'Failed to Send ✗';
+                    submitBtn.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
+                    submitBtn.style.color = '#fff';
+                }
+            } catch {
+                submitBtn.innerHTML = 'Failed to Send ✗';
+                submitBtn.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
                 submitBtn.style.color = '#fff';
-                
-                // Clear input fields
-                contactForm.reset();
-                
-                setTimeout(() => {
-                    submitBtn.disabled = false;
-                    submitBtn.style.opacity = '1';
-                    submitBtn.style.background = '';
-                    submitBtn.style.color = '';
-                    submitBtn.innerHTML = originalText;
-                }, 3000);
-            }, 1500);
+            }
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+                submitBtn.style.background = '';
+                submitBtn.style.color = '';
+                submitBtn.innerHTML = originalText;
+            }, 3000);
         });
     }
 });
