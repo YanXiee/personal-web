@@ -24,7 +24,8 @@
 
 ### Technical Changes
 
-- No structural changes; content-only session (see content-log.md)
+- Created `CLAUDE.md` with project-specific AI assistant instructions (gitignored)
+- `.gitignore`: added `CLAUDE.md`
 
 ---
 
