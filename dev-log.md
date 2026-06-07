@@ -19,6 +19,21 @@
 
 ---
 
+## 2026-06-07 (Session 3)
+
+### Content Changes
+
+- Research & Data Tools description rewritten: broader, ends with "turning raw data into scientific results and publications"
+- Publications reordered: 2026 ECS → 2025 Inorg. Chem. → 2023 JACS (newest first)
+- Research Interests paragraph: "My research investigates..." → "My research at Argonne investigates..."
+
+### Technical Changes
+
+- deploy.command: shows current latest git tag before prompting for new version
+- .gitignore (Pin-Web): fixed — added `My Background/`, removed duplicate entry; untracked My Background/ from git history via `git rm --cached`
+
+---
+
 ## 2026-06-07 (Session 2)
 
 ### Content Changes
