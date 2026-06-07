@@ -337,15 +337,15 @@
                     <form class="contact-form" id="portfolioContactForm" action="https://formspree.io/f/mqeoplov" method="POST" style="margin-top: 32px;">
                         <div class="form-group">
                             <label for="nameInput">Your Name</label>
-                            <input type="text" id="nameInput" placeholder="Dr. Jane Doe" required>
+                            <input type="text" id="nameInput" name="name" placeholder="Dr. Jane Doe" required>
                         </div>
                         <div class="form-group">
                             <label for="emailInput">Email Address</label>
-                            <input type="email" id="emailInput" placeholder="jane.doe@company.com" required>
+                            <input type="email" id="emailInput" name="email" placeholder="jane.doe@company.com" required>
                         </div>
                         <div class="form-group">
                             <label for="messageInput">Message</label>
-                            <textarea id="messageInput" rows="5" placeholder="I'd love to discuss potential opportunities or collaborations..." required></textarea>
+                            <textarea id="messageInput" name="message" rows="5" placeholder="I'd love to discuss potential opportunities or collaborations..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;" id="submitContactFormBtn">
                             Send Message
