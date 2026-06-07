@@ -18,9 +18,9 @@ git add .
 git commit -m "$msg"
 
 if [ -n "$tag" ]; then
-    git tag "$tag"
+    git tag "v$tag"
     git push origin main --tags
-    echo "Deployed and tagged as $tag!"
+    echo "Deployed and tagged as v$tag!"
 else
     git push
     echo "Deployed!"
