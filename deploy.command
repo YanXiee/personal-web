@@ -7,6 +7,7 @@ read msg
 
 if [ -z "$msg" ]; then
     echo "Commit message cannot be empty. Aborting."
+    read
     exit 1
 fi
 
@@ -24,3 +25,7 @@ else
     git push
     echo "Deployed!"
 fi
+
+echo ""
+echo "Press Enter to close..."
+read
