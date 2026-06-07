@@ -19,6 +19,41 @@
 
 ---
 
+## 2026-06-07 (Session 2)
+
+### Content Changes
+
+- Hero badge: "Open to Materials & Energy R&D Opportunities" → "Open to R&D Opportunities in Materials and Energy"
+- Hero description: rewrote to "A materials scientist who uses characterization and synthesis to understand why materials behave the way they do, currently at Argonne National Laboratory working on developing next-generation polymer membranes."
+- About section title: "About" → "About Me"; removed "Biography" subheading
+- Added KLA internship as 4th about-row: Organic Chemist, Intern / KLA
+- Removed status labels (Current, Alumnus) from education cards; Intern moved into title
+- "Chemistry Research" → "Research Interests"; edu-school merged into one line
+- Argonne paragraph: removed redundant opening sentence
+- PhD paragraph: added "electrocatalytic" and "Raman spectroscopy"
+- Research Interests paragraph: rewrote to remove AI-ish phrasing
+- KLA paragraph: written and refined
+- Core Strengths: removed Multimodal Characterization card (4 → 3 cards)
+- Core Strengths descriptions rewritten with specific real examples (Structure-Property, Interdisciplinary Collaboration, Independent Problem-Solving)
+- Key Expertise descriptions updated: Characterization, Materials Synthesis, Laboratory Operations
+- Multiple AI-ish phrases replaced across Core Strengths and Key Expertise
+- Publications: added ECS 249th Meeting oral presentation card (purple tag)
+- Publications: simplified meta to year only (removed volume/page numbers)
+- Publications section-desc: "13 peer-reviewed publications; 1 patent application pending."
+
+### Technical Changes
+
+- .about-row: single column on ≤768px; gap reduced to 24px
+- .edu-icon-container: added flex-shrink: 0 to prevent compression
+- Battery head (::after): fixed alignment with top: 50%; transform: translateY(-50%)
+- Battery charging animation: transitions to green (#22c55e) when fully charged
+- Hero mobile: removed text-align: center; align-items/badge/ctas → flex-start
+- Hero buttons: flex: 1 equal width on desktop; flex-direction: column + width: 100% on mobile (≤768px)
+- Section border-bottom: removed (rely on alternating backgrounds for separation)
+- .gitignore: created; added Pin_Chen_GM_Research_Presentation_2026.pdf
+
+---
+
 ## 2026-06-07
 
 ### Content Changes
