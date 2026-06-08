@@ -20,6 +20,39 @@
 
 ---
 
+## 2026-06-08 (Session 10)
+
+### Technical Changes
+
+- Scrollbar thumb: near-invisible white → Apple-style dark gray (`rgba(0,0,0,0.25)`), hover `rgba(0,0,0,0.4)`
+- Hero buttons: `flex: 1` → `flex: none; width: 220px; white-space: nowrap`; column layout at ≤740px with `width: 250px`; photo breakpoint moved 992px → 1024px
+- Hero wrapper: `grid-template-columns: 1.2fr 0.8fr` → `minmax(0, 740px) auto`; gap 64px → 40px; photo stays fixed once it appears
+- pub-card: removed leftover `display: grid; grid-template-columns: auto 1fr` (`.pub-number` was already removed)
+- pub-tag: default colors changed from cyan → blue (`rgba(0,113,227,0.1)` / `var(--primary)`)
+- pub-link hover: `var(--text-primary)` → `var(--primary)`
+- Dead CSS removed: `.pub-top .pub-tag { margin-bottom: 0 }`
+- Contact section redesigned: "Contact Information" h3 removed; LinkedIn card restructured as `div.contact-item` with `a.contact-icon` (only icon is clickable link, not entire card); description text placed as `p.contact-desc` beside icon
+- `a.contact-item:hover` scoped to `<a>` elements only (card hover removed)
+- `contact-icon`: added `flex-shrink: 0; text-decoration: none`
+- Send Message button: right-aligned via `<div style="text-align: right;">` wrapper; icon 18px → 15px
+- Expertise card `::before` overlay: added color-specific overrides for all card colors (green/blue/orange/purple/yellow)
+- Battery icon: border and `::after` changed from `var(--text-secondary)` → `currentColor` (inherits blue); size 44×20 → 32×15px; tip `::after` 4×10 → 3×8px
+- About Me icons: 28px → 32px
+- Borders darkened: `edu-icon-container`, `education-card`, `contact-item`, `contact-form`, form inputs/textarea — all `var(--border-color)` → `rgba(0,0,0,0.15)`
+
+---
+
+## 2026-06-08 (Session 9)
+
+### Issues Found (Unresolved)
+
+- **chuanpinchen.com 顯示舊版本** — 根本原因：chuanpinchen.com 是由 **Netlify** 託管，不是 GitHub Pages。`curl -sI` 確認 `server: Netlify`。
+- **Netlify 連動斷掉** — 推測是 Session 4 fresh-start branch（重寫 git 歷史、改 branch 名為 main）導致 Netlify 與 GitHub repo 的自動 deploy 連線中斷。之後每次 push 只更新 GitHub Pages，Netlify 那邊沒收到。
+- **錯誤修法** — 誤以為是 GitHub Pages CDN 問題，加了 CNAME 和 .nojekyll，無效。CNAME 已移除（否則 yanxiee.github.io/personal-web/ 會 redirect 到壞掉的 chuanpinchen.com）；.nojekyll 保留（無害）。
+- **修復方式（待執行）** — 請 repo owner 登入 Netlify → 找到 chuanpinchen.com site → Site configuration → Build & deploy → 重新 link GitHub repo `personal-web`，branch 選 `main`，trigger deploy。步驟存於 `My Background/terminal.txt`。
+
+---
+
 ## 2026-06-07 (Session 8)
 
 ### Technical Changes
