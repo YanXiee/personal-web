@@ -325,7 +325,7 @@ section:nth-child(even) {
 }
 
 .btn-secondary:hover {
-    background: rgba(0, 113, 227, 0.06);
+    background: rgba(0, 113, 227, 0.03);
     border-color: rgba(0, 113, 227, 0.3);
     color: var(--primary);
     transform: translateY(-2px);
@@ -544,17 +544,6 @@ section:nth-child(even) {
     overflow: hidden;
 }
 
-.expertise-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0, 113, 227, 0.05) 0%, transparent 100%);
-    opacity: 0;
-    transition: var(--transition-smooth);
-}
 
 .expertise-card:hover {
     transform: translateY(-6px);
@@ -562,20 +551,15 @@ section:nth-child(even) {
     box-shadow: 0 10px 30px rgba(0, 113, 227, 0.05);
 }
 
-.card-green:hover { border-color: rgba(34, 197, 94, 0.3) !important; box-shadow: 0 10px 30px rgba(34, 197, 94, 0.08) !important; }
-.card-green:hover::before { background: linear-gradient(180deg, rgba(34, 197, 94, 0.05) 0%, transparent 100%) !important; }
+.card-green:hover { background: rgba(34, 197, 94, 0.03) !important; border-color: rgba(34, 197, 94, 0.3) !important; box-shadow: 0 10px 30px rgba(34, 197, 94, 0.08) !important; }
 .card-green:hover .expertise-icon { color: #fff !important; background: #22c55e !important; border-color: #22c55e !important; box-shadow: 0 0 15px rgba(34, 197, 94, 0.4) !important; }
-.card-blue:hover { border-color: rgba(0, 113, 227, 0.3) !important; box-shadow: 0 10px 30px rgba(0, 113, 227, 0.08) !important; }
-.card-blue:hover::before { background: linear-gradient(180deg, rgba(0, 113, 227, 0.05) 0%, transparent 100%) !important; }
+.card-blue:hover { background: rgba(0, 113, 227, 0.03) !important; border-color: rgba(0, 113, 227, 0.3) !important; box-shadow: 0 10px 30px rgba(0, 113, 227, 0.08) !important; }
 .card-blue:hover .expertise-icon { color: #fff !important; background: #0071e3 !important; border-color: #0071e3 !important; box-shadow: 0 0 15px rgba(0, 113, 227, 0.4) !important; }
-.card-orange:hover { border-color: rgba(249, 115, 22, 0.3) !important; box-shadow: 0 10px 30px rgba(249, 115, 22, 0.08) !important; }
-.card-orange:hover::before { background: linear-gradient(180deg, rgba(249, 115, 22, 0.05) 0%, transparent 100%) !important; }
+.card-orange:hover { background: rgba(249, 115, 22, 0.03) !important; border-color: rgba(249, 115, 22, 0.3) !important; box-shadow: 0 10px 30px rgba(249, 115, 22, 0.08) !important; }
 .card-orange:hover .expertise-icon { color: #fff !important; background: #f97316 !important; border-color: #f97316 !important; box-shadow: 0 0 15px rgba(249, 115, 22, 0.4) !important; }
-.card-purple:hover { border-color: rgba(139, 92, 246, 0.3) !important; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.08) !important; }
-.card-purple:hover::before { background: linear-gradient(180deg, rgba(139, 92, 246, 0.05) 0%, transparent 100%) !important; }
+.card-purple:hover { background: rgba(139, 92, 246, 0.03) !important; border-color: rgba(139, 92, 246, 0.3) !important; box-shadow: 0 10px 30px rgba(139, 92, 246, 0.08) !important; }
 .card-purple:hover .expertise-icon { color: #fff !important; background: #8b5cf6 !important; border-color: #8b5cf6 !important; box-shadow: 0 0 15px rgba(139, 92, 246, 0.4) !important; }
-.card-yellow:hover { border-color: rgba(245, 158, 11, 0.3) !important; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.08) !important; }
-.card-yellow:hover::before { background: linear-gradient(180deg, rgba(245, 158, 11, 0.05) 0%, transparent 100%) !important; }
+.card-yellow:hover { background: rgba(245, 158, 11, 0.03) !important; border-color: rgba(245, 158, 11, 0.3) !important; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.08) !important; }
 .card-yellow:hover .expertise-icon { color: #fff !important; background: #f59e0b !important; border-color: #f59e0b !important; box-shadow: 0 0 15px rgba(245, 158, 11, 0.4) !important; }
 
 .no-hover .expertise-card:hover {
@@ -584,19 +568,11 @@ section:nth-child(even) {
     box-shadow: none;
 }
 
-.no-hover .expertise-card:hover::before {
-    opacity: 0;
-}
-
 .no-hover .expertise-card:hover .expertise-icon {
     color: inherit;
     background: inherit;
     box-shadow: none;
     border-color: inherit;
-}
-
-.expertise-card:hover::before {
-    opacity: 1;
 }
 
 .expertise-icon {
@@ -681,11 +657,13 @@ section:nth-child(even) {
 }
 
 .pub-card.pub-journal:hover {
+    background: rgba(0, 113, 227, 0.03);
     border-color: rgba(0, 113, 227, 0.3);
     box-shadow: 0 10px 30px rgba(0, 113, 227, 0.08);
 }
 
 .pub-card.pub-conference:hover {
+    background: rgba(139, 92, 246, 0.03);
     border-color: rgba(139, 92, 246, 0.3);
     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.08);
 }
